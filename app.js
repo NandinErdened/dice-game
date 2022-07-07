@@ -9,19 +9,38 @@ var scores = [0 , 0];
 
 
 
-//toglogchiin eeljindee tsugluulj bui onoog hadgalah huvisagch
+//Тоглогчийн ээлжиндээ цуглуулж буй оноог хадгалах хувьсагч
 
 var roundScore = 0;
 
 
 
-//shoo ali talaaraa buusang hadgalah 1-6 gesen ene utguudiig sanamsarguigeer uusgej ogno
+//Шоо аль талаараа буусанг хадгалах 1-6 гэсэн энэ утгуудыг санамсаргүйгээр үүсгэж өгнө
 
-var dice = Math.floor( Math.random()*6)+1;
-// window.document.querySelector('#score-0').textContent = dice;
-// document.querySelector('#score-1').textContent = dice;
-document.querySelector(".dice").style.display="none";
-document.querySelector('#score-0').textContent = 0;
-document.querySelector('#score-1').textContent = 0;
-document.querySelector('#current-0').textContent = 0;
-console.log('Шоо: '+ dice)
+
+
+
+
+//Тоглоом эхлэхэд бэлдэж байна
+
+//document.getElementById('#score-0').te
+
+
+
+
+
+document.getElementById('score-0').textContent = "0";
+document.getElementById('score-1').textContent = "0";
+
+
+document.getElementById('current-0').textContent = "0";
+document.getElementById('current-1').textContent = "0";
+
+document.querySelector(".btn-roll").addEventListener('click' , function (){
+	var diceNumber = Math.floor( Math.random()*6)+1;
+	
+document.querySelector(".dice").src = 'dice-' + diceNumber + '.png' 
+
+	alert('Shoo buulaaa: ' + diceNumber);
+});
+
